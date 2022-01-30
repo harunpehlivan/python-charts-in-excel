@@ -42,8 +42,7 @@ def matplotlib_bar_chart(df):
 
 def pandas_bar_chart(df):
     ax = df.plot(kind="bar", x="day", y="tip", color="#50C878", grid=False)
-    fig = ax.get_figure()
-    return fig
+    return ax.get_figure()
 
 
 def seaborn_bar_chart(df):
@@ -60,8 +59,7 @@ def seaborn_scatter_plot(df):
 
 
 def plotly_histogram(df):
-    fig = px.histogram(df, x="day", y="total_bill", color="sex")
-    return fig
+    return px.histogram(df, x="day", y="total_bill", color="sex")
 
 
 def plotly_histogram_advanced(df):
